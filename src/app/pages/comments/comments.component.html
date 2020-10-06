@@ -1,0 +1,15 @@
+<ul class="list-group">
+
+    <app-comment *ngFor="let mensaje of mensajes"
+              [mensaje]="mensaje"
+              (clickComment)="escuchaClick( $event )"></app-comment>
+
+
+  <!--  FORMA BASICA DE HACER EL NGFOR SOBRE LOS REGISTROS DEVUELTOS POR EL SERVICIO-->
+  <!--    <li *ngFor="let mensaje of mensajes" class="list-group-item">-->
+  <!--      <h2>{{ mensaje.name }}</h2>-->
+  <!--      <p>-->
+  <!--        {{ mensaje.body }}-->
+  <!--      </p>-->
+  <!--    </li>-->
+</ul>
