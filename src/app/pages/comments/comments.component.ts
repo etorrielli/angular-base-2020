@@ -9,6 +9,7 @@ import {DataService} from '../../services/data.service';
 export class CommentsComponent implements OnInit {
 
   mensajes: any[] = [];
+  // mensajes: MensajeDTO[] = [];
 
   constructor(private dataService: DataService) {
   }
@@ -16,6 +17,7 @@ export class CommentsComponent implements OnInit {
   ngOnInit(): void {
     // DE MANERA TRADICIONAL
     this.dataService.getComments().subscribe((comments: any[]) => {
+      // this.dataService.getComments().subscribe((comments: MensajeDTO[]) => {
       console.log(comments);
       this.mensajes = comments;
     });

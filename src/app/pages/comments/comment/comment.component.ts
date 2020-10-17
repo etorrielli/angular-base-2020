@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {MensajeDTO} from '../../../models/mensajeDTO';
 
 @Component({
   selector: 'app-comment',
@@ -8,6 +9,7 @@ import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 export class CommentComponent implements OnInit {
 
   @Input() mensaje: any;
+  // @Input() mensaje: MensajeDTO;
   @Output() clickComment = new EventEmitter<number>();
 
   constructor() { }
